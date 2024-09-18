@@ -32,7 +32,7 @@ public class LMDBInterface {
         }
 
         public Builder open(String directory, int flags) {
-            E(mdb_env_open(this.env, directory, flags, 0664));
+            E(mdb_env_open(this.env, directory, flags, 660));
             return this;
         }
 
